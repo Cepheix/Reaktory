@@ -59,27 +59,47 @@
         </div>
         <div class="input-group field">
             <span class="input-group-addon" id="basic-addon3">location</span>
-            <input id="location" name="location" required="required" type="text" class="form-control" aria-describedby="basic-addon3">
+            <input id="location" name="location" type="text" class="form-control" aria-describedby="basic-addon3">
         </div>
         <div class="input-group field">
             <span class="input-group-addon" id="basic-addon3">process</span>
-            <input id="process" name="process" required="required" type="text" class="form-control" aria-describedby="basic-addon3">
+            <input id="process" name="process" type="text" class="form-control" aria-describedby="basic-addon3">
         </div>
         <div class="input-group field">
             <span class="input-group-addon" id="basic-addon3">capacity</span>
-            <input id="capacity" name="capacity" required="required" type="text" class="form-control" aria-describedby="basic-addon3">
+            <input id="capacity" name="capacity"  type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">moderator</span>
+            <input id="moderator" name="moderator"  type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">coolant</span>
+            <input id="coolant" name="coolant"  type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">fuel</span>
+            <input id="fuel" name="fuel"  type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">enrichment</span>
+            <input id="enrichment" name="enrichment"  type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">model</span>
+            <input id="loops" name="loops"  type="text" class="form-control" aria-describedby="basic-addon3">
         </div>
         <div class="input-group field">
             <span class="input-group-addon" id="basic-addon3">current status</span>
-            <input id="current_status" name="current_status" required="required" type="text" class="form-control" aria-describedby="basic-addon3">
+            <input id="current_status" name="current_status"  type="text" class="form-control" aria-describedby="basic-addon3">
         </div>
         <div class="input-group field">
             <span class="input-group-addon" id="basic-addon3">start year</span>
-           <input id="start_year" name="start_year" required="required" type="text" class="form-control" aria-describedby="basic-addon3">
+           <input id="start_year" name="start_year"  type="text" class="form-control" aria-describedby="basic-addon3">
         </div>
         <div class="input-group field">
             <span class="input-group-addon" id="basic-addon3">owner</span>
-            <input id="owner" name="owner" required="required" type="text" class="form-control" aria-describedby="basic-addon3">
+            <input id="owner" name="owner"  type="text" class="form-control" aria-describedby="basic-addon3">
         </div>
         <div class="input-group field">
             <span class="input-group-addon" id="basic-addon3">image</span>

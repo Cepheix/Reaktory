@@ -90,6 +90,16 @@
             echo '<p>' . $row['process'] . '</p>';
             echo '<label>capacity: </label>';
             echo '<p>' . $row['capacity'] . '</p>';
+            echo '<label>moderator: </label>';
+            echo '<p>' . $row['moderator'] . '</p>';
+            echo '<label>coolant: </label>';
+            echo '<p>' . $row['coolant'] . '</p>';
+            echo '<label>fuel: </label>';
+            echo '<p>' . $row['fuel'] . '</p>';
+            echo '<label>enrichment: </label>';
+            echo '<p>' . $row['enrichment'] . '</p>';
+            echo '<label>model: </label>';
+            echo '<p>' . $row['loops'] . '</p>';
             echo '<label>current status: </label>';
             echo '<p>' . $row['current_status'] . '</p>';
             echo '<label>start year: </label>';

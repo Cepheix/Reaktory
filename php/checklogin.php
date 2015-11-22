@@ -18,6 +18,7 @@ if($exists > 0) //IF there are no returning rows or no existing username
         $table_users = $row['login']; // the first username row is passed on to $table_users, and so on until the query is finished
         $table_password = $row['password']; // the first password row is passed on to $table_users, and so on until the query is finished
         $table_permission = $row['permissions'];
+        $id = $row['id'];
     }
     if(($username == $table_users) && ($password == $table_password)) // checks if there are any matching fields
     {
@@ -25,6 +26,7 @@ if($exists > 0) //IF there are no returning rows or no existing username
         {
             $_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
             $_SESSION['permission'] = $table_permission; //set the permission of the user in a session. This serves as a global variable
+            $_SESSION['id'] = $id;
             header("location: ../reactors.php"); // redirects the user to the authenticated home page
         }
 

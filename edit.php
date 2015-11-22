@@ -87,6 +87,26 @@
             <input id="capacity" name="capacity" required="required" value="' . $row['capacity'] . '" type="text" class="form-control" aria-describedby="basic-addon3">
         </div>
         <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">moderator</span>
+            <input id="capacity" name="capacity" required="required" value="' . $row['moderator'] . '" type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">coolant</span>
+            <input id="capacity" name="capacity" required="required" value="' . $row['coolant'] . '" type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">fuel</span>
+            <input id="capacity" name="capacity" required="required" value="' . $row['fuel'] . '" type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">enrichment</span>
+            <input id="capacity" name="capacity" required="required" value="' . $row['enrichment'] . '" type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
+            <span class="input-group-addon" id="basic-addon3">model</span>
+            <input id="capacity" name="capacity" required="required" value="' . $row['loops'] . '" type="text" class="form-control" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group field">
             <span class="input-group-addon" id="basic-addon3">current status</span>
             <input id="current_status" name="current_status" required="required" value="' . $row['current_status'] . '" type="text" class="form-control" aria-describedby="basic-addon3">
         </div>
