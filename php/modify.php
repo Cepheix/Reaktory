@@ -10,8 +10,15 @@ if((strlen($_SESSION['user']) > 0) && ($_SESSION['permission'] == 'admin')) {
     $start_year = $_POST['start_year'];
     $owner = $_POST['owner'];
     $img = $_POST['img'];
-    mysql_connect("mysql.agh.edu.pl", "cephei", "3QaCHyZQ") or die(mysql_error()); //Connect to server
-    mysql_select_db("cephei") or die("Cannot connect to database"); //connect to database
+    require( 'Constants.php' );
+
+    $dbHost = Constants::$dbHost;
+    $dbName = Constants::$dbName;
+    $dbUsername = Constants::$dbUsername;
+    $dbUserPassword = Constants::$dbUserPassword;
+
+    mysql_connect($dbHost, $dbUsername, $dbUserPassword) or die(mysql_error()); //Connect to server
+    mysql_select_db($dbName) or die("Cannot connect to database"); //connect to database
     $result = mysql_query("UPDATE reactors SET facility='$facility', location='$location', process='$process',
  capacity='$capacity', current_status='$current_status', start_year='$start_year', owner='$owner', img='$img' WHERE id='$id'");
     echo $id, PHP_EOL;

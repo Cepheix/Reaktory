@@ -1,11 +1,18 @@
 <?php
 session_start();
-//$username = mysql_real_escape_string($_POST['username']); // more secure version
-//$password = mysql_real_escape_string($_POST['password']); // more secure version
+require( 'Constants.php' );
 $username = $_POST['username'];
 $password = $_POST['password'];
-mysql_connect("mysql.agh.edu.pl", "cephei","3QaCHyZQ") or die(mysql_error()); //Connect to server
-mysql_select_db("cephei") or die("Cannot connect to database"); //Connect to database
+$salt = Constants::$salt;
+$hash = md5($salt . $password);
+
+$dbHost = Constants::$dbHost;
+$dbName = Constants::$dbName;
+$dbUsername = Constants::$dbUsername;
+$dbUserPassword = Constants::$dbUserPassword;
+
+mysql_connect($dbHost, $dbUsername, $dbUserPassword) or die(mysql_error()); //Connect to server
+mysql_select_db($dbName) or die("Cannot connect to database"); //connect to database
 $query = mysql_query("SELECT * from users WHERE login='$username'"); //Query the users table if there are matching rows equal to $username
 $exists = mysql_num_rows($query); //Checks if username exists
 $table_users = "";
@@ -20,15 +27,12 @@ if($exists > 0) //IF there are no returning rows or no existing username
         $table_permission = $row['permissions'];
         $id = $row['id'];
     }
-    if(($username == $table_users) && ($password == $table_password)) // checks if there are any matching fields
+    if(($username == $table_users) && ($hash == $table_password)) // checks if there are any matching fields
     {
-        if($password == $table_password)
-        {
-            $_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
-            $_SESSION['permission'] = $table_permission; //set the permission of the user in a session. This serves as a global variable
-            $_SESSION['id'] = $id;
-            header("location: ../reactors.php"); // redirects the user to the authenticated home page
-        }
+        $_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
+        $_SESSION['permission'] = $table_permission; //set the permission of the user in a session. This serves as a global variable
+        $_SESSION['id'] = $id;
+        header("location: ../reactors.php"); // redirects the user to the authenticated home page
 
     }
     else
